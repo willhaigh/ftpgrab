@@ -13,7 +13,7 @@ on:
   pull_request:
 
 env:
-  DOCKERHUB_SLUG: crazymax/ftpgrab
+  DOCKERHUB_SLUG: willhaigh/ftpgrab
   GHCR_SLUG: ghcr.io/crazy-max/ftpgrab
 
 jobs:
@@ -96,7 +96,7 @@ jobs:
         if: github.event_name != 'pull_request'
         uses: docker/login-action@v2
         with:
-          username: ${{ secrets.DOCKER_USERNAME }}
+          username: ${{ secrets.DOCKER_USER }}
           password: ${{ secrets.DOCKER_PASSWORD }}
       -
         name: Login to GHCR
