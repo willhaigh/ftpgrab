@@ -13,7 +13,7 @@ on:
   pull_request:
 
 env:
-  DOCKERHUB_SLUG: willhaigh/ftpgrab
+  DOCKERHUB_SLUG: bobbyjakson/ftpgrab
   GHCR_SLUG: ghcr.io/willhaigh/ftpgrab
 
 jobs:
