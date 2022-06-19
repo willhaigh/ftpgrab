@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"io"
 	"os"
-	"regexp"
 
 	"github.com/crazy-max/ftpgrab/v7/internal/config"
 	"github.com/crazy-max/ftpgrab/v7/internal/logging"
@@ -78,7 +77,7 @@ func (c *Client) Common() config.ServerCommon {
 // ReadDir fetches the contents of a directory, returning a list of os.FileInfo's
 func (c *Client) ReadDir(path string) ([]os.FileInfo, error) {
 	var files []*ftp.Entry
-	files, err := c.ftp.List(regexp.QuoteMeta(path))
+	files, err := c.ftp.List(path)
 	if err != nil {
 		return nil, err
 	}
