@@ -14,7 +14,7 @@ on:
 
 env:
   DOCKERHUB_SLUG: willhaigh/ftpgrab
-  GHCR_SLUG: ghcr.io/crazy-max/ftpgrab
+  GHCR_SLUG: ghcr.io/willhaigh/ftpgrab
 
 jobs:
   validate:
